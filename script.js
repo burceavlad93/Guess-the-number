@@ -10,7 +10,7 @@ const theNumber = document.querySelector('.number');                        // H
 const progressText = document.querySelector('.message');                    // Game info text update
 const scoreInfo = document.querySelector('.score');                         // Game score info update
 const maxScore = document.querySelector('.highscore');                      // Game Highscore info update
-
+//------------------------------------------------------GAME MECHANIC---------------------------------------------------------------------------
 const checkNumber = function (number) {                                     // Checks the number entered by the user
     if (number === 0) {                                                     // If there is no number in the input field or the number is 0
         progressText.textContent = "No number...";                          // The game Text Info will update acordingly
@@ -37,8 +37,7 @@ const checkNumber = function (number) {                                     // C
         scoreInfo.textContent = `Score: ${score}`                           // The game Score Info will update acordingly
     }
 }
-
-
+//------------------------------------------------------GAMEPLAY-------------------------------------------------------------------------------------------
 checkBtn.addEventListener('click', function () {                            // Check Button
 
     if (gameOn) {                                                           // As long as the game is still ON
@@ -52,7 +51,7 @@ checkBtn.addEventListener('click', function () {                            // C
         }
     }
 })
-
+//------------------------------------------------------NEW GAME-------------------------------------------------------------------------------------------
 againBtn.addEventListener('click', function () {                            // Again button
     hiddenNumber = Math.trunc(Math.random() * 20) + 1;                      // Generates another hidden number
     theNumber.innerHTML = `<strong>?</strong>`;                             // Hides the number if it was revealed
